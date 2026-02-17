@@ -26,7 +26,6 @@ function calculate(){
 
     resultBox.innerText = "Result: " + result;
 
-    // BONUS color change
     if(result > 0)
         resultBox.style.background = "lightgreen";
     else if(result < 0)

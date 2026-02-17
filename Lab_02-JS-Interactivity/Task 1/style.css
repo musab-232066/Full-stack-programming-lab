@@ -1,7 +1,7 @@
 body{
     font-family: Arial;
     background:#f2f2f2;
-    text-align:center;   /* keeps heading centered */
+    text-align:center;  
 }
 
 .quiz-box{
@@ -11,7 +11,7 @@ body{
     padding:25px;
     border-radius:10px;
     box-shadow:0px 0px 10px gray;
-    text-align:left;     /* 👈 LEFT ALIGN EVERYTHING INSIDE */
+    text-align:left;    
 }
 
 .quiz-box p{
@@ -34,10 +34,10 @@ button{
 
 #result{
     color:blue;
-    text-align:center;   /* result centered only */
+    text-align:center;   
 }
 
 #message{
     color:green;
-    text-align:center;   /* message centered only */
+    text-align:center;   
 }

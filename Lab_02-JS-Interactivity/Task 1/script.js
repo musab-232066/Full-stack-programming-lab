@@ -10,7 +10,7 @@ const a2 = "hypertext markup language";
 const a3 = "boolean";
 const a4 = "do while";
 
-// Load questions dynamically
+// Load questions dynamically using DOM
 document.getElementById("q1text").innerText = q1;
 document.getElementById("q2text").innerText = q2;
 document.getElementById("q3text").innerText = q3;

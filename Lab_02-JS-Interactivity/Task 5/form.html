@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Registration Form</h1>
+
+<div class="form-box">
+
+    <label>Name:</label>
+    <input type="text" id="name">
+    <small id="nameError"></small>
+
+    <label>Email:</label>
+    <input type="text" id="email">
+    <small id="emailError"></small>
+
+    <label>Age:</label>
+    <input type="number" id="age">
+    <small id="ageError"></small>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <small id="passError"></small>
+
+    <br><br>
+    <button onclick="validateForm()">Register</button>
+
+    <h3 id="success"></h3>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
