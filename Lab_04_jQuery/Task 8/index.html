@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Game - Lab 04</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="quiz-wrapper">
+        <div id="quizContainer" class="card">
+            <div class="quiz-header">
+                <span id="questionCount">Question 1 of X</span>
+            </div>
+            
+            <h2 id="questionText">Loading question...</h2>
+            
+            <div id="optionsContainer" class="options-list">
+                </div>
+            
+            <button id="btnNext" class="btn" disabled>Next Question</button>
+        </div>
+
+        <div id="resultContainer" class="card" style="display: none;">
+            <h2>Quiz Completed!</h2>
+            <div class="score-circle">
+                <span id="scoreText">0/0</span>
+            </div>
+            <p id="feedbackText">Great job!</p>
+            <button id="btnRestart" class="btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

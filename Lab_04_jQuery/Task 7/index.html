@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag-and-Drop Sortable - Lab 04</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="list-wrapper">
+        <h2>Task Priority List</h2>
+        <p>Drag and drop items to reorder them based on priority.</p>
+        
+        <ul id="sortableList" class="sortable-list">
+            <li class="list-item" draggable="true">1. Finalize Project Proposal</li>
+            <li class="list-item" draggable="true">2. Team Sync Meeting</li>
+            <li class="list-item" draggable="true">3. Review jQuery Documentation</li>
+            <li class="list-item" draggable="true">4. Design Database Schema</li>
+            <li class="list-item" draggable="true">5. Client Feedback Session</li>
+        </ul>
+
+        <div id="orderStatus" class="status-msg">Order updated!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

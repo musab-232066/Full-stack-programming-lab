@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Style Editor - Lab 04</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="editor-container">
+        <h2>Chained Style Editor</h2>
+        
+        <div class="input-section">
+            <textarea id="userText" placeholder="Enter your text here...">jQuery Chaining is powerful!</textarea>
+        </div>
+
+        <div class="control-panel">
+            <div class="control-group">
+                <button id="btnIncrease">A+</button>
+                <button id="btnDecrease">A-</button>
+            </div>
+
+            <div class="control-group">
+                <select id="textColor">
+                    <option value="#000000">Text: Black</option>
+                    <option value="#007bff">Text: Blue</option>
+                    <option value="#28a745">Text: Green</option>
+                    <option value="#dc3545">Text: Red</option>
+                </select>
+                <select id="bgColor">
+                    <option value="transparent">BG: None</option>
+                    <option value="#f8f9fa">BG: Light Grey</option>
+                    <option value="#fff3cd">BG: Yellow</option>
+                    <option value="#d1ecf1">BG: Cyan</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <button id="toggleBold" class="toggle-btn">B</button>
+                <button id="toggleItalic" class="toggle-btn">I</button>
+            </div>
+
+            <button id="btnReset" class="reset-btn">Reset</button>
+        </div>
+
+        <div id="displayBlock" class="preview-box">
+            jQuery Chaining is powerful!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
