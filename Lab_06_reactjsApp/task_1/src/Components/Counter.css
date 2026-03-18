@@ -1,0 +1,75 @@
+.counter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e8ddb5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.counter-card {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(102, 106, 134, 0.15);
+  text-align: center;
+  border-top: 8px solid #b2c9ab;
+}
+
+.counter-title {
+  color: #666a86;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.counter-display {
+  font-size: 72px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #788aa3;
+}
+
+.button-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.counter-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, opacity 0.2s;
+}
+
+.counter-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.counter-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn-increment {
+  background-color: #92b6b1;
+}
+
+.btn-decrement {
+  background-color: #788aa3;
+}
+
+.btn-reset {
+  background-color: #666a86;
+}
+
+.btn-decrement:disabled {
+  background-color: #e8ddb5;
+  color: #788aa3;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

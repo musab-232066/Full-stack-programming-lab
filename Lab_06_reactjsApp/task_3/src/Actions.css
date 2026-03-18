@@ -1,0 +1,85 @@
+.actions-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.4s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.actions-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(63, 51, 77, 0.15);
+  text-align: center;
+  border-top: 8px solid #574b60;
+  min-width: 320px;
+}
+
+.title-text {
+  margin-bottom: 10px;
+  font-size: 26px;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+.message-display {
+  font-size: 16px;
+  color: #3f334d;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 1px solid #c0c5c1;
+  border-left: 4px solid #7d8491;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.action-btn {
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.action-btn:active {
+  transform: scale(0.98);
+}
+
+.btn-msg {
+  background-color: #574b60;
+}
+
+.btn-msg:hover {
+  background-color: #3f334d;
+}
+
+.btn-bg {
+  background-color: #7d8491;
+}
+
+.btn-bg:hover {
+  background-color: #574b60;
+}
+
+.btn-alert {
+  background-color: #c0c5c1;
+  color: #3f334d;
+}
+
+.btn-alert:hover {
+  background-color: #7d8491;
+  color: #ffffff;
+}
