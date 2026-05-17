@@ -1,15 +1,20 @@
+import Image from 'next/image';
+
 export default function HeroSlider() {
   return (
     <section className="relative bg-gradient-to-br from-gray-200 via-gray-100 to-white overflow-hidden" style={{minHeight: '340px'}}>
-      {/* Orange wave decoration */}
       <div className="absolute bottom-0 left-0 right-0 h-2 bg-brand-orange" />
-      <div className="absolute bottom-2 left-0 right-0 h-1 bg-orange-300 opacity-50" />
 
       <div className="max-w-6xl mx-auto flex items-center px-8 py-10 gap-8">
-        {/* Furniture image placeholder */}
+        {/* Hero furniture image */}
         <div className="flex-1 flex items-center justify-center">
-          <div className="w-72 h-64 bg-gray-300 rounded-lg flex items-center justify-center text-8xl shadow-lg">
-            🪑
+          <div className="relative w-72 h-64 rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=500&fit=crop"
+              alt="Featured furniture"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
 
@@ -32,7 +37,6 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      {/* Arrow nav */}
       <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-2">
         <button className="text-gray-400 text-2xl hover:text-brand-orange">&lt;</button>
         <button className="text-brand-orange text-2xl hover:text-orange-700">&gt;</button>
