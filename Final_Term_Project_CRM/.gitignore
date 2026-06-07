@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Environment variables (SECURITY RISK to push these)
+.env
+.env.local
+
+# Next.js build output
+.next/
+out/
+build/
+
+# Misc
+.DS_Store
+npm-debug.log*
