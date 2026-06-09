@@ -20,7 +20,6 @@ export default function RegisterPage() {
     e.preventDefault();
     setError("");
 
-    // Client-side password match validation
     if (password !== confirm) {
       setError("Passwords do not match.");
       return;
@@ -61,12 +60,14 @@ export default function RegisterPage() {
       </Head>
 
       <div style={s.page}>
-        <div style={s.grid} aria-hidden />
-
         <div style={s.card}>
           <div style={s.brand}>
-            <span style={s.brandDot} />
-            <span style={s.brandName}>CRM</span>
+            <div style={s.brandIcon}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <span style={s.brandName}>CRM System</span>
           </div>
 
           <h1 style={s.heading}>Create your account</h1>
@@ -128,7 +129,7 @@ export default function RegisterPage() {
                   style={{
                     ...s.input,
                     ...(confirm && password !== confirm
-                      ? { borderColor: "rgba(248,113,113,.5)" }
+                      ? { borderColor: "#fca5a5" }
                       : {}),
                   }}
                   placeholder="••••••••"
@@ -136,7 +137,6 @@ export default function RegisterPage() {
               </div>
             </div>
 
-            {/* Live mismatch hint */}
             {confirm && password !== confirm && (
               <p style={s.hint}>Passwords don&apos;t match yet.</p>
             )}
@@ -144,8 +144,8 @@ export default function RegisterPage() {
             {error && (
               <div style={s.errorBox} role="alert">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
-                  <circle cx="8" cy="8" r="7.5" stroke="#f87171" />
-                  <path d="M8 4.5v4M8 10.5v1" stroke="#f87171" strokeWidth="1.5" strokeLinecap="round" />
+                  <circle cx="8" cy="8" r="7.5" stroke="#ef4444" />
+                  <path d="M8 4.5v4M8 10.5v1" stroke="#ef4444" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
                 {error}
               </div>
@@ -167,15 +167,15 @@ export default function RegisterPage() {
 
       <style>{`
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: #0f172a; }
+        body { background: #f0f4ff; }
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(18px); }
           to   { opacity: 1; transform: translateY(0); }
         }
-        input::placeholder { color: #475569; }
-        input:focus { outline: none; border-color: #3b82f6 !important; box-shadow: 0 0 0 3px rgba(59,130,246,.18) !important; }
-        button:hover:not(:disabled) { background: #2563eb !important; transform: translateY(-1px); }
+        input::placeholder { color: #94a3b8; }
+        input:focus { outline: none; border-color: #2563eb !important; box-shadow: 0 0 0 3px rgba(37,99,235,.15) !important; }
+        button:hover:not(:disabled) { background: #1d4ed8 !important; transform: translateY(-1px); }
         button:active:not(:disabled) { transform: translateY(0); }
         button:disabled { opacity: 0.6; cursor: not-allowed; }
       `}</style>
@@ -189,56 +189,46 @@ const s = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: "#0f172a",
+    background: "#f0f4ff",
     fontFamily: "'Sora', sans-serif",
     padding: "24px 16px",
-    position: "relative",
-    overflow: "hidden",
-  },
-  grid: {
-    position: "absolute",
-    inset: 0,
-    backgroundImage:
-      "linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px)",
-    backgroundSize: "40px 40px",
-    pointerEvents: "none",
   },
   card: {
     width: "100%",
     maxWidth: 480,
-    background: "rgba(255,255,255,0.04)",
-    border: "1px solid rgba(255,255,255,0.09)",
+    background: "#ffffff",
+    border: "1px solid #dde3f0",
     borderRadius: 20,
     padding: "44px 40px 36px",
-    backdropFilter: "blur(12px)",
-    boxShadow: "0 24px 64px rgba(0,0,0,.5)",
+    boxShadow: "0 4px 24px rgba(37,99,235,0.08)",
     animation: "fadeUp .45s ease both",
   },
   brand: {
     display: "flex",
     alignItems: "center",
-    gap: 8,
+    gap: 10,
     marginBottom: 32,
   },
-  brandDot: {
-    width: 10,
-    height: 10,
-    borderRadius: "50%",
-    background: "#3b82f6",
-    display: "block",
-    boxShadow: "0 0 10px #3b82f6",
+  brandIcon: {
+    width: 36,
+    height: 36,
+    borderRadius: 9,
+    background: "#2563eb",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    boxShadow: "0 4px 12px rgba(37,99,235,0.25)",
   },
   brandName: {
-    fontSize: 13,
+    fontSize: 16,
     fontWeight: 600,
-    letterSpacing: "0.18em",
-    color: "#94a3b8",
-    textTransform: "uppercase",
+    color: "#1e293b",
+    letterSpacing: "-0.2px",
   },
   heading: {
     fontSize: 26,
     fontWeight: 600,
-    color: "#f1f5f9",
+    color: "#1e293b",
     letterSpacing: "-0.3px",
     marginBottom: 6,
   },
@@ -265,40 +255,40 @@ const s = {
   label: {
     fontSize: 13,
     fontWeight: 500,
-    color: "#94a3b8",
+    color: "#475569",
     letterSpacing: "0.02em",
   },
   input: {
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
+    background: "#f8fafc",
+    border: "1px solid #dde3f0",
     borderRadius: 10,
     padding: "11px 14px",
     fontSize: 14,
-    color: "#f1f5f9",
+    color: "#1e293b",
     transition: "border-color .2s, box-shadow .2s",
     fontFamily: "inherit",
     width: "100%",
   },
   hint: {
     fontSize: 12,
-    color: "#f87171",
+    color: "#ef4444",
     marginTop: -8,
   },
   errorBox: {
     display: "flex",
     alignItems: "center",
     gap: 8,
-    background: "rgba(248,113,113,0.1)",
-    border: "1px solid rgba(248,113,113,0.25)",
+    background: "#fef2f2",
+    border: "1px solid #fecaca",
     borderRadius: 10,
     padding: "10px 14px",
     fontSize: 13,
-    color: "#fca5a5",
+    color: "#dc2626",
   },
   btn: {
     marginTop: 4,
     padding: "12px",
-    background: "#3b82f6",
+    background: "#2563eb",
     color: "#fff",
     border: "none",
     borderRadius: 10,
@@ -325,10 +315,10 @@ const s = {
     marginTop: 28,
     textAlign: "center",
     fontSize: 13,
-    color: "#475569",
+    color: "#64748b",
   },
   link: {
-    color: "#60a5fa",
+    color: "#2563eb",
     textDecoration: "none",
     fontWeight: 500,
   },

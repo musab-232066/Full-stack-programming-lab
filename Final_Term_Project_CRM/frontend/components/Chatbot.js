@@ -1,10 +1,8 @@
-// frontend/components/Chatbot.js
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { FaComments, FaTimes, FaPaperPlane, FaRobot } from "react-icons/fa";
 import { useAuth } from "@/context/AuthContext";
 
-// ─── Predefined command responses ────────────────────────────────────────────
 const COMMANDS = {
   hi: "Hello! I'm your CRM assistant. Type 'help' to see available commands.",
   hello:

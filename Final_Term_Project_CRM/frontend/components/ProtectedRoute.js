@@ -2,11 +2,6 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "../context/AuthContext";
 
-/**
- * Wrap any page with <ProtectedRoute> to require authentication.
- * Shows a centred spinner while the auth state is loading,
- * redirects to /login when unauthenticated, and renders children otherwise.
- */
 export default function ProtectedRoute({ children }) {
   const { user, token, loading } = useAuth();
   const router = useRouter();

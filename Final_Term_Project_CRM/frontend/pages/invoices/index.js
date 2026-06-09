@@ -1,3 +1,4 @@
+import Navbar from "../../components/Navbar";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import api from "../../utils/api";
@@ -80,6 +81,7 @@ function InvoicesPage() {
 
   return (
     <>
+      <Navbar />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap');
 

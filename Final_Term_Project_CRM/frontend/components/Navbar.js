@@ -8,6 +8,7 @@ import {
   RiLogoutBoxLine,
   RiUserSmileLine,
   RiBriefcaseLine,
+  RiBillLine,
 } from "react-icons/ri";
 
 export default function Navbar() {
@@ -18,9 +19,13 @@ export default function Navbar() {
     { href: "/dashboard", label: "Dashboard", icon: RiDashboardLine },
     { href: "/customers", label: "Customers", icon: RiGroupLine },
     { href: "/customers/add", label: "Add Customer", icon: RiUserAddLine },
+    { href: "/invoices", label: "Invoices", icon: RiBillLine },
   ];
 
-  const isActive = (href) => router.pathname === href;
+  const isActive = (href) => {
+    if (href === "/invoices") return router.pathname.startsWith("/invoices");
+    return router.pathname === href;
+  };
 
   return (
     <>
@@ -31,8 +36,8 @@ export default function Navbar() {
           position: sticky;
           top: 0;
           z-index: 100;
-          background: #0f172a;
-          border-bottom: 1px solid rgba(255,255,255,0.06);
+          background: #ffffff;
+          border-bottom: 1px solid #dde3f0;
           font-family: 'DM Sans', sans-serif;
         }
 
@@ -58,26 +63,26 @@ export default function Navbar() {
         .navbar-logo-icon {
           width: 34px;
           height: 34px;
-          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+          background: #2563eb;
           border-radius: 9px;
           display: flex;
           align-items: center;
           justify-content: center;
           color: #fff;
           font-size: 17px;
-          box-shadow: 0 4px 12px rgba(99,102,241,0.4);
+          box-shadow: 0 4px 12px rgba(37,99,235,0.25);
         }
 
         .navbar-logo-text {
           font-family: 'Sora', sans-serif;
           font-weight: 700;
           font-size: 17px;
-          color: #fff;
+          color: #1e293b;
           letter-spacing: -0.3px;
         }
 
         .navbar-logo-text span {
-          color: #818cf8;
+          color: #2563eb;
         }
 
         .navbar-nav {
@@ -97,19 +102,20 @@ export default function Navbar() {
           text-decoration: none;
           font-size: 14px;
           font-weight: 500;
-          color: #94a3b8;
+          color: #64748b;
           transition: all 0.15s ease;
           white-space: nowrap;
         }
 
         .nav-link:hover {
-          background: rgba(255,255,255,0.07);
-          color: #e2e8f0;
+          background: #f0f4ff;
+          color: #1e293b;
+          text-decoration: none;
         }
 
         .nav-link.active {
-          background: rgba(99,102,241,0.18);
-          color: #a5b4fc;
+          background: #eff6ff;
+          color: #2563eb;
         }
 
         .nav-link svg {
@@ -133,26 +139,26 @@ export default function Navbar() {
         .navbar-avatar {
           width: 32px;
           height: 32px;
-          background: linear-gradient(135deg, #334155, #475569);
+          background: #eff6ff;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #cbd5e1;
+          color: #2563eb;
           font-size: 15px;
-          border: 1px solid rgba(255,255,255,0.1);
+          border: 1px solid #dde3f0;
         }
 
         .navbar-username {
           font-size: 13.5px;
           font-weight: 500;
-          color: #cbd5e1;
+          color: #1e293b;
         }
 
         .navbar-divider {
           width: 1px;
           height: 24px;
-          background: rgba(255,255,255,0.1);
+          background: #dde3f0;
         }
 
         .logout-btn {
@@ -161,9 +167,9 @@ export default function Navbar() {
           gap: 6px;
           padding: 7px 14px;
           background: transparent;
-          border: 1px solid rgba(255,255,255,0.1);
+          border: 1px solid #dde3f0;
           border-radius: 8px;
-          color: #94a3b8;
+          color: #64748b;
           font-size: 13.5px;
           font-weight: 500;
           font-family: 'DM Sans', sans-serif;
@@ -172,9 +178,9 @@ export default function Navbar() {
         }
 
         .logout-btn:hover {
-          background: rgba(239,68,68,0.12);
-          border-color: rgba(239,68,68,0.3);
-          color: #fca5a5;
+          background: #fef2f2;
+          border-color: #fecaca;
+          color: #ef4444;
         }
 
         .logout-btn svg {
